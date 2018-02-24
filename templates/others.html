@@ -1,0 +1,15 @@
+{% extends 'dash.html' %}
+{% block content %}
+
+ <form method="POST" action="{{url_for('others')}}" >
+    {{ form.hidden_tag() }}
+
+     <div class="form-group">
+      {{form.category.label}}
+      {{form.category(class="drop-down list")}}
+    </div>
+    {{form.submit(class="btn btn-info")}}
+
+  </form>
+
+{% endblock %}
